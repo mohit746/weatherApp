@@ -10,6 +10,7 @@ import {
   heightPercentageToDP,
   responsiveFontSize,
   responsiveHorizontalSize,
+  responsiveVerticalSize,
   widthPercentageToDP,
 } from '../../themes/styles/pxDimensions';
 import colors from '../../themes/colors';
@@ -36,7 +37,7 @@ const HomeComponent = (props) => {
       <TouchableOpacity
         style={styles.buttonStyle}
         onPress={() => handleLookup()}>
-        <Text>Lookup</Text>
+        <Text>{'Lookup'}</Text>
       </TouchableOpacity>
     </View>
   );
@@ -44,7 +45,7 @@ const HomeComponent = (props) => {
 
 const styles = StyleSheet.create({
   buttonStyle: {
-    borderRadius: 1,
+    borderRadius: 10,
     borderWidth: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -64,6 +65,8 @@ const styles = StyleSheet.create({
     width: widthPercentageToDP(60),
     alignItems: 'center',
     justifyContent: 'center',
+    borderBottomWidth: 0.4,
+    marginVertical: responsiveVerticalSize(4),
   },
   headerTitle: {
     fontSize: responsiveFontSize(18),
